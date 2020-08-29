@@ -56,8 +56,8 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Calculadora de IMC",
-          style: TextStyle(fontSize: 25.0),
+          "Calculadora IMC",
+          style: TextStyle(fontSize: 24.0),
         ),
         centerTitle: true,
         backgroundColor: Colors.deepPurple,
@@ -70,7 +70,7 @@ class _HomeState extends State<Home> {
       ),
       backgroundColor: const Color(0xFFFFFFFF),
       body: SingleChildScrollView(
-        padding: EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 30.0),
+        padding: EdgeInsets.fromLTRB(50, 10, 50, 30),
         child: Form(
           key: _formKey,
           child: Column(
@@ -80,13 +80,14 @@ class _HomeState extends State<Home> {
               TextFormField(
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
+                  icon: Icon(Icons.person),
                   labelText: "Peso (kg)",
                   labelStyle: TextStyle(color: Colors.deepPurple),
                 ),
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.deepPurple, fontSize: 25.0),
                 controller: weightController,
-                validator: (value) {
+                validator: (value){
                   if(value.isEmpty){
                     return "Insira seu peso.";
                   }
@@ -95,14 +96,15 @@ class _HomeState extends State<Home> {
               TextFormField(
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
+                  icon: Icon(Icons.person),
                   labelText: "Altura (cm)",
                   labelStyle: TextStyle(color: Colors.deepPurple),
                 ),
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.deepPurple, fontSize: 25.0),
                 controller: heightController,
-                validator: (value) {
-                  if(value.isEmpty) {
+                validator: (value){
+                  if(value.isEmpty){
                     return "Insira sua altura.";
                   }
                 },
