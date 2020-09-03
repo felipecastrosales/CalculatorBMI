@@ -58,18 +58,21 @@ class _HomeState extends State<Home> {
   final kLabelStyle = TextStyle(
       color: _colorDefault, fontWeight: FontWeight.bold, fontSize: 26);
 
-  final kLightLabelStyle = TextStyle(color: _colorLight, fontSize: 16);
+  final kLightLabelStyle = TextStyle(color: _colorLight, fontSize: 20);
 
   final kBoxDecorationStyle = BoxDecoration(
     color: _colorFields,
-    borderRadius: BorderRadius.circular(1),
+    borderRadius: BorderRadius.circular(50),
+      boxShadow: [
+        BoxShadow(color: _colorDefault, spreadRadius: .2)
+      ],
   );
 
   final _snackBar = SnackBar(
     backgroundColor: _colorDefault,
     duration: Duration(seconds: 3),
     content: Text('Veja se um dos campos está vazio.',
-        style: TextStyle(color: _colorLight, fontSize: 32)),
+        style: TextStyle(color: _colorLight, fontSize: 18)),
   );
 
   final _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -81,7 +84,6 @@ class _HomeState extends State<Home> {
           Text('Peso (kg)', style: kLabelStyle),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 100, vertical: 16),
-            height: 50,
             decoration: kBoxDecorationStyle,
             child: TextFormField(
               style: kLightLabelStyle,
@@ -107,7 +109,6 @@ class _HomeState extends State<Home> {
           Text('Altura (cm)', style: kLabelStyle),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 100, vertical: 16),
-            height: 50,
             decoration: kBoxDecorationStyle,
             child: TextFormField(
               style: kLightLabelStyle,
@@ -156,6 +157,7 @@ class _HomeState extends State<Home> {
                 Icon(Icons.person, size: 120, color: _colorLight),
                 _buildSizedBox(),
                 _buildWeight(),
+                SizedBox(height: 16),
                 _buildHeight(),
                 _buildSizedBox(),
                 SizedBox(height: 16),
@@ -174,7 +176,7 @@ class _HomeState extends State<Home> {
                     },
                   ),
                 ),
-                SizedBox(height: 16),
+                SizedBox(height: 24),
                 Text(_infoText,
                     style: kLabelStyle, textAlign: TextAlign.center),
               ],
