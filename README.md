@@ -1,5 +1,5 @@
  <p align="center">
-      <img src="https://user-images.githubusercontent.com/59374587/91995303-06f0f080-ed0e-11ea-8507-55001063c85e.png" width="50%" alt="https://www.freepik.com/vectors/people People vector created by katemangostar"/>
+      <img src="https://user-images.githubusercontent.com/59374587/91995303-06f0f080-ed0e-11ea-8507-55001063c85e.png" width="30%" alt="https://www.freepik.com/vectors/people People vector created by katemangostar"/>
    </p>
 
    <h1 align="center">Calculator BMI</h1>
