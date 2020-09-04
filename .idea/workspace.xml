@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3d5b564-ef25-4a21-acd3-3c46f6a9c7c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/demos/version1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demos/version2.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +21,7 @@
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../conversor" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -47,34 +44,34 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="302" y="126" key="FileChooserDialogImpl" timestamp="1598732756147">
+    <state x="302" y="126" key="FileChooserDialogImpl" timestamp="1599158197929">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="302" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596110955410" />
-    <state x="302" y="126" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1598732756147" />
-    <state width="1323" height="187" key="GridCell.Tab.0.bottom" timestamp="1599079592567">
+    <state x="302" y="126" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1599158197929" />
+    <state width="1323" height="187" key="GridCell.Tab.0.bottom" timestamp="1599097365934">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="984" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595880112964" />
-    <state width="1323" height="187" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1599079592567" />
+    <state width="1323" height="187" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1599097365934" />
     <state width="1877" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594342354886" />
-    <state width="1323" height="187" key="GridCell.Tab.0.center" timestamp="1599079592567">
+    <state width="1323" height="187" key="GridCell.Tab.0.center" timestamp="1599097365934">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="984" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595880112963" />
-    <state width="1323" height="187" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1599079592567" />
+    <state width="1323" height="187" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1599097365934" />
     <state width="1877" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594342354886" />
-    <state width="1323" height="187" key="GridCell.Tab.0.left" timestamp="1599079592566">
+    <state width="1323" height="187" key="GridCell.Tab.0.left" timestamp="1599097365934">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="984" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595880112962" />
-    <state width="1323" height="187" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1599079592566" />
+    <state width="1323" height="187" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1599097365934" />
     <state width="1877" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594342354886" />
-    <state width="1323" height="187" key="GridCell.Tab.0.right" timestamp="1599079592567">
+    <state width="1323" height="187" key="GridCell.Tab.0.right" timestamp="1599097365934">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="984" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595880112963" />
-    <state width="1323" height="187" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1599079592567" />
+    <state width="1323" height="187" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1599097365934" />
     <state width="1877" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594342354886" />
     <state x="22" y="5" key="SettingsEditor" timestamp="1593624909666">
       <screen x="0" y="0" width="1366" height="728" />
