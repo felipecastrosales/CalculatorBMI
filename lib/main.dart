@@ -63,9 +63,7 @@ class _HomeState extends State<Home> {
   final kBoxDecorationStyle = BoxDecoration(
     color: _colorFields,
     borderRadius: BorderRadius.circular(50),
-      boxShadow: [
-        BoxShadow(color: _colorDefault, spreadRadius: .2)
-      ],
+    boxShadow: [BoxShadow(color: _colorDefault, spreadRadius: .2)],
   );
 
   final _snackBar = SnackBar(
@@ -76,57 +74,6 @@ class _HomeState extends State<Home> {
   );
 
   final _scaffoldKey = GlobalKey<ScaffoldState>();
-
-  Widget _buildWeight() => Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          SizedBox(height: 16),
-          Text('Peso (kg)', style: kLabelStyle),
-          Container(
-            margin: EdgeInsets.symmetric(horizontal: 100, vertical: 16),
-            decoration: kBoxDecorationStyle,
-            child: TextFormField(
-              style: kLightLabelStyle,
-              textAlign: TextAlign.center,
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                border: InputBorder.none,
-              ),
-              controller: weightController,
-              validator: (value) {
-                if (value.isEmpty) {
-                  _scaffoldKey.currentState.showSnackBar(_snackBar);
-                } return null;
-              },
-            ),
-          ),
-        ],
-      );
-
-  Widget _buildHeight() => Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Text('Altura (cm)', style: kLabelStyle),
-          Container(
-            margin: EdgeInsets.symmetric(horizontal: 100, vertical: 16),
-            decoration: kBoxDecorationStyle,
-            child: TextFormField(
-              style: kLightLabelStyle,
-              textAlign: TextAlign.center,
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                border: InputBorder.none,
-              ),
-              controller: heightController,
-              validator: (value) {
-                if (value.isEmpty) {
-                  _scaffoldKey.currentState.showSnackBar(_snackBar);
-                } return null;
-              },
-            ),
-          ),
-        ],
-      );
 
   Widget _buildSizedBox() =>
       Divider(color: _colorDefault, thickness: 1.5, indent: 75, endIndent: 75);
@@ -154,11 +101,62 @@ class _HomeState extends State<Home> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Icon(Icons.person, size: 120, color: _colorLight),
+                Icon(Icons.person, size: 100, color: _colorLight),
                 _buildSizedBox(),
-                _buildWeight(),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    SizedBox(height: 16),
+                    Text('Peso (kg)', style: kLabelStyle),
+                    Container(
+                      margin:
+                          EdgeInsets.symmetric(horizontal: 80, vertical: 16),
+                      decoration: kBoxDecorationStyle,
+                      child: TextFormField(
+                        style: kLightLabelStyle,
+                        textAlign: TextAlign.center,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                        ),
+                        controller: weightController,
+                        validator: (value) {
+                          if (value.isEmpty) {
+                            _scaffoldKey.currentState.showSnackBar(_snackBar);
+                          }
+                          return null;
+                        },
+                      ),
+                    ),
+                  ],
+                ),
                 SizedBox(height: 16),
-                _buildHeight(),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Text('Altura (cm)', style: kLabelStyle),
+                    Container(
+                      margin:
+                          EdgeInsets.symmetric(horizontal: 80, vertical: 16),
+                      decoration: kBoxDecorationStyle,
+                      child: TextFormField(
+                        style: kLightLabelStyle,
+                        textAlign: TextAlign.center,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                        ),
+                        controller: heightController,
+                        validator: (value) {
+                          if (value.isEmpty) {
+                            _scaffoldKey.currentState.showSnackBar(_snackBar);
+                          }
+                          return null;
+                        },
+                      ),
+                    ),
+                  ],
+                ),
                 _buildSizedBox(),
                 SizedBox(height: 16),
                 Container(

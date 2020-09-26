@@ -17,10 +17,10 @@
    <h2 align="center">Preview 📱</h2><br>
 
    <p align="center">
-   <img src="https://user-images.githubusercontent.com/59374587/92043905-70472280-ed53-11ea-9adf-354a2896528a.gif">
+   <img src="https://user-images.githubusercontent.com/59374587/92509368-884df480-f1e0-11ea-8649-cab4daca028d.png">
    </p>
 
-   > * You can see all version previews in [`demos`](https://github.com/felipecastrosales/CalculatorBMI-Flutter/demos) folder. 🧐📂
+   > * You can see all version previews in [`demos`](https://github.com/felipecastrosales/CalculatorBMI/demos) folder. 🧐📂
 
 ---
 
@@ -38,10 +38,10 @@
 
    ```   
    - Clone this repository:
-   $ git clone https://github.com/felipecastrosales/CalculatorBMI-Flutter
+   $ git clone https://github.com/felipecastrosales/CalculatorBMI
 
    - Enter in directory:
-   $ cd CalculatorBMI-Flutter
+   $ cd CalculatorBMI
 
    - For install dependencies:
    $ flutter packages get
@@ -54,11 +54,11 @@
 
    <h2 align="center">License 📝</h2>
 
-   This repository is under MIT license. You can see the [LICENSE](https://github.com/felipecastrosales/CalculatorBMI-Flutter/blob/master/LICENSE) file for more details. 😉
+   This repository is under MIT license. You can see the [LICENSE](https://github.com/felipecastrosales/CalculatorBMI/blob/master/LICENSE) file for more details. 😉
 
    ---
 
-   >This project was developed with ❤️ by **[@Felipe Sales](https://www.linkedin.com/in/felipecastrosales/)**, with the instructor **[Daniel Ciolfi](https://linkedin.com/in/maykbrito)**, in the course  **["Creating Android and iOS Apps with Flutter - Create 16 Apps"](https://www.udemy.com/course/curso-completo-flutter-app-android-ios)** on **[Udemy](https://www.udemy.com/)**.<br>
+   >This project was developed with ❤️ by **[@Felipe Sales](https://www.linkedin.com/in/felipecastrosales/)**, with the instructor **[Daniel Ciolfi](https://linkedin.com/in/danielciolfi)**, in the course  **["Creating Android and iOS Apps with Flutter - Create 16 Apps"](https://www.udemy.com/course/curso-completo-flutter-app-android-ios)** on **[Udemy](https://www.udemy.com/)**.<br>
    If it helped you, give ⭐, contribute, it will help me too 😉
 
 ---
