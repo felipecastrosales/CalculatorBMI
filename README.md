@@ -18,12 +18,12 @@
 
    <p>
    
-- [About 📖](#about-)
-- [Preview 📱](#preview-)
-- [Challenges and Learnings along the way 🤯](#---challenges-and-learnings-along-the-way----)
-- [How to Use 🤔](#how-to-use-)
-- [How to Contribute 💪](#how-to-contribute-)
-- [License 📝](#license-)
+- [📖 About](#about-)
+- [📱 Preview](#preview-)
+- [🤯 Challenges and Learnings along the way](#---challenges-and-learnings-along-the-way----)
+- [🤔 How to Use](#how-to-use-)
+- [💪 How to Contribute](#how-to-contribute-)
+- [📝 License](#license-)
 
 ---
 
@@ -32,7 +32,7 @@
    <h2 align="center">Preview 📱</h2><br>
 
    <p align="center">
-   <img src="https://user-images.githubusercontent.com/59374587/92509368-884df480-f1e0-11ea-8649-cab4daca028d.png">
+   <img src="https://user-images.githubusercontent.com/59374587/92509368-884df480-f1e0-11ea-8649-cab4daca028d.png" wid>
    </p>
 
    > * You can see all version previews in [`demos`](https://github.com/felipecastrosales/CalculatorBMI/demos) folder. 🧐📂
