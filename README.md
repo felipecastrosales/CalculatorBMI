@@ -9,7 +9,7 @@
    <p align="center">
       A simple Body Mass Index Calculator made with Flutter 💙. <br>
       With this application, you can use it to assess wheter you are at the ideal weight according to your height. And depending on this result, you can know if you are at the ideal wight, below or above.<br>
-      This application is in version 2.0.
+      This application is in version 2.1.
    </p>
 
 ---
