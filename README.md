@@ -32,10 +32,10 @@
    <h2 align="center">Preview 📱</h2><br>
 
    <p align="center">
-   <img src="https://user-images.githubusercontent.com/59374587/92509368-884df480-f1e0-11ea-8649-cab4daca028d.png" wid>
+   <img src="https://github.com/felipecastrosales/CalculatorBMI/blob/master/demos/version2.gif" width="500">
    </p>
 
-   > * You can see all version previews in [`demos`](https://github.com/felipecastrosales/CalculatorBMI/demos) folder. 🧐📂
+   > * You can see all version previews in [`demos`](https://github.com/felipecastrosales/CalculatorBMI/blob/master/demos) folder. 🧐📂
 
 ---
 
