@@ -42,20 +42,28 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  static const _colorDefault    = Color(0xFF21e6c1);
-  static const _colorFields     = Color(0xFF393e46);
+  static const _colorDefault = Color(0xFF21e6c1);
+  static const _colorFields = Color(0xFF393e46);
   static const _colorBackground = Color(0xFF222831);
-  static const _colorLight      = Color(0xFFe4f9ff);
+  static const _colorLight = Color(0xFFe4f9ff);
 
   final kLabelStyle = TextStyle(
-    color: _colorDefault, fontWeight: FontWeight.bold, fontSize: 26);
+    color: _colorDefault,
+    fontWeight: FontWeight.bold,
+    fontSize: 26,
+  );
 
-  final kLightLabelStyle = TextStyle(color: _colorLight, fontSize: 20);
+  final kLightLabelStyle = TextStyle(
+    color: _colorLight,
+    fontSize: 20,
+  );
 
   final kBoxDecorationStyle = BoxDecoration(
     color: _colorFields,
     borderRadius: BorderRadius.circular(50),
-    boxShadow: [BoxShadow(color: _colorDefault, spreadRadius: .2)],
+    boxShadow: [
+      BoxShadow(color: _colorDefault, spreadRadius: .2),
+    ],
   );
 
   final _snackBar = SnackBar(
@@ -63,14 +71,21 @@ class _HomePageState extends State<HomePage> {
     duration: Duration(seconds: 3),
     content: Text(
       'Veja se um dos campos está vazio.',
-      style: TextStyle(color: _colorLight, fontSize: 18),
+      style: TextStyle(
+        color: _colorLight,
+        fontSize: 18,
+      ),
     ),
   );
 
   final _scaffoldKey = GlobalKey<ScaffoldState>();
 
   Widget _buildSizedBox() => Divider(
-    color: _colorDefault, thickness: 1.5, indent: 75, endIndent: 75);
+        color: _colorDefault,
+        thickness: 1.5,
+        indent: 75,
+        endIndent: 75,
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -95,13 +110,20 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Icon(Icons.person, size: 100, color: _colorLight),
+              Icon(
+                Icons.person,
+                size: 100,
+                color: _colorLight,
+              ),
               _buildSizedBox(),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   SizedBox(height: 16),
-                  Text('Peso (kg)', style: kLabelStyle),
+                  Text(
+                    'Peso (kg)',
+                    style: kLabelStyle,
+                  ),
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 80, vertical: 16),
                     decoration: kBoxDecorationStyle,
@@ -112,8 +134,8 @@ class _HomePageState extends State<HomePage> {
                       decoration: InputDecoration(border: InputBorder.none),
                       controller: weightController,
                       validator: (value) {
-                        if (value.isEmpty) {
-                          _scaffoldKey.currentState.showSnackBar(_snackBar);
+                        if (value!.isEmpty) {
+                          ScaffoldMessenger.of(context).showSnackBar(_snackBar);
                         }
                         return null;
                       },
@@ -125,7 +147,10 @@ class _HomePageState extends State<HomePage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text('Altura (cm)', style: kLabelStyle),
+                  Text(
+                    'Altura (cm)',
+                    style: kLabelStyle,
+                  ),
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 80, vertical: 16),
                     decoration: kBoxDecorationStyle,
@@ -136,8 +161,8 @@ class _HomePageState extends State<HomePage> {
                       decoration: InputDecoration(border: InputBorder.none),
                       controller: heightController,
                       validator: (value) {
-                        if (value.isEmpty) {
-                          _scaffoldKey.currentState.showSnackBar(_snackBar);
+                        if (value!.isEmpty) {
+                          ScaffoldMessenger.of(context).showSnackBar(_snackBar);
                         }
                         return null;
                       },
@@ -149,25 +174,37 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: 16),
               Container(
                 height: 50.0,
-                child: RaisedButton(
-                  color: _colorFields,
-                  child: Text('Calcule', style: kLabelStyle),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50.0),
-                    side: BorderSide(width: 1.5, color: _colorDefault)
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: _colorFields,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50.0),
+                      side: BorderSide(
+                        width: 1.5,
+                        color: _colorDefault,
+                      ),
+                    ),
+                  ),
+                  child: Text(
+                    'Calcule',
+                    style: kLabelStyle,
                   ),
                   onPressed: () {
-                    if (_formKey.currentState.validate()) {
+                    if (_formKey.currentState!.validate()) {
                       _calculate();
                     }
                   },
                 ),
               ),
               SizedBox(height: 24),
-              Text(_infoText, style: kLabelStyle, textAlign: TextAlign.center),
+              Text(
+                _infoText,
+                style: kLabelStyle,
+                textAlign: TextAlign.center,
+              ),
             ],
           ),
-        )
+        ),
       ),
     );
   }
