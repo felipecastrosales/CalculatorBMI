@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
-  _HomePageState createState() => _HomePageState();
+  State<StatefulWidget> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  TextEditingController weightController = TextEditingController();
-  TextEditingController heightController = TextEditingController();
-  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final formKey = GlobalKey<FormState>();
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+  final weightController = TextEditingController();
+  final heightController = TextEditingController();
+
   String _infoText = 'Informe seus dados.';
 
   void _resetFields() {
@@ -16,29 +20,35 @@ class _HomePageState extends State<HomePage> {
     heightController.text = '';
     setState(() {
       _infoText = 'Informe seus dados.';
-      _formKey = GlobalKey<FormState>();
     });
   }
 
   void _calculate() {
+    if (!formKey.currentState!.validate() ||
+        [
+          weightController,
+          heightController,
+        ].any((controller) => controller.text.isEmpty)) {
+      return;
+    }
+
     setState(() {
       var weight = double.parse(weightController.text);
       var height = double.parse(heightController.text) / 100;
       var imc = weight / (height * height);
       print(imc);
-      if (imc < 18.6) {
-        _infoText = 'Abaixo do Peso (${imc.toStringAsPrecision(4)})';
-      } else if (imc >= 18.6 && imc < 24.9) {
-        _infoText = 'Peso Ideal (${imc.toStringAsPrecision(4)})';
-      } else if (imc >= 24.9 && imc < 29.9) {
-        _infoText = 'Levemente acima do Peso (${imc.toStringAsPrecision(4)})';
-      } else if (imc >= 29.9 && imc < 34.9) {
-        _infoText = 'Obesidade Grau I (${imc.toStringAsPrecision(4)})';
-      } else if (imc >= 34.9 && imc < 39.9) {
-        _infoText = 'Obesidade Grau II (${imc.toStringAsPrecision(4)})';
-      } else if (imc >= 40) {
-        _infoText = 'Obesidade Grau III (${imc.toStringAsPrecision(4)})';
-      }
+      _infoText = switch (imc) {
+        < 18.6 => 'Abaixo do Peso (${imc.toStringAsPrecision(4)})',
+        >= 18.6 when imc < 24.9 => 'Peso Ideal (${imc.toStringAsPrecision(4)})',
+        >= 24.9 when imc < 29.9 =>
+          'Levemente acima do Peso (${imc.toStringAsPrecision(4)})',
+        >= 29.9 when imc < 34.9 =>
+          'Obesidade Grau I (${imc.toStringAsPrecision(4)})',
+        >= 34.9 when imc < 39.9 =>
+          'Obesidade Grau II (${imc.toStringAsPrecision(4)})',
+        >= 40 => 'Obesidade Grau III (${imc.toStringAsPrecision(4)})',
+        _ => 'Valor inválido.',
+      };
     });
   }
 
@@ -78,19 +88,17 @@ class _HomePageState extends State<HomePage> {
     ),
   );
 
-  final _scaffoldKey = GlobalKey<ScaffoldState>();
-
-  Widget _buildSizedBox() => Divider(
-        color: _colorDefault,
-        thickness: 1.5,
-        indent: 75,
-        endIndent: 75,
-      );
+  final divider = Divider(
+    color: _colorDefault,
+    thickness: 1.5,
+    indent: 75,
+    endIndent: 75,
+  );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _scaffoldKey,
+      key: scaffoldKey,
       backgroundColor: _colorBackground,
       appBar: AppBar(
         title: Text('Calculadora IMC', style: kLabelStyle),
@@ -106,7 +114,7 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 50),
         child: Form(
-          key: _formKey,
+          key: formKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
@@ -115,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                 size: 100,
                 color: _colorLight,
               ),
-              _buildSizedBox(),
+              divider,
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
@@ -170,13 +178,13 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              _buildSizedBox(),
+              divider,
               SizedBox(height: 16),
               Container(
                 height: 50.0,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: _colorFields,
+                    backgroundColor: _colorFields,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),
                       side: BorderSide(
@@ -190,9 +198,8 @@ class _HomePageState extends State<HomePage> {
                     style: kLabelStyle,
                   ),
                   onPressed: () {
-                    if (_formKey.currentState!.validate()) {
-                      _calculate();
-                    }
+                    _calculate();
+                    FocusScope.of(context).unfocus();
                   },
                 ),
               ),
